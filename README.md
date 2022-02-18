@@ -5,7 +5,7 @@ built with Bootstrap and has many ready-made pages to edit by your own.</h4>
 
 ## Preview
 
-<img src="/readme/gallery/3.jpg" style="height: 500px;">
+<img src="/readme/gallery/3.jpg" style="height: 300px;">
 
 ## New Features
 
