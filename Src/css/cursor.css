@@ -1,0 +1,18 @@
+.cursor {
+  left: 0;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  background-color: #738adb;
+  position: absolute;
+  border-radius: 5px;
+}
+
+.cursor__follower {
+  transition: transform .2s;
+  width: 8px;
+  height: 8px;
+}
+html {
+cursor: none;
+}
