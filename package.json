@@ -1,8 +1,0 @@
-{
-  "name": "botwebsite",
-  "author": "Agent_Abhay#0593 <legacyagentsof@gmail.com>",
-  "publish": false,
-  "dependencies": {
-    "lib": "latest"
-  }
-}
