@@ -6,11 +6,11 @@ built with Bootstrap and has many ready-made pages to edit by your own.</h4>
 ## Preview
 
 ### Main Page
-<img src="/readme/gallery/3.jpg" style="height: 700px;">
+<img src="/readme/gallery/3.jpg" style="height: 500px;">
 
 ### Commands Page
 
-<img src="/readme/gallery/com.png" style="height: 700px;">
+<img src="/readme/gallery/com.png" style="height: 500px;">
 
 ## New Features
 
