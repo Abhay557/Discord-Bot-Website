@@ -1,0 +1,26 @@
+{
+  "name": "lib",
+  "version": "5.1.0",
+  "description": "Autocode standard library Node.js bindings",
+  "main": "lib.js",
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "keywords": [
+    "autocode",
+    "lib",
+    "serverless",
+    "microservice",
+    "stdlib",
+    "stdlib.com",
+    "node",
+    "standard",
+    "library"
+  ],
+  "author": "Keith Horwood",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stdlib/lib-node.git"
+  },
+  "license": "MIT"
+}
