@@ -12,35 +12,38 @@ built with Bootstrap and has many ready-made pages to edit by your own.</h4>
 
 <img src="/readme/gallery/com.png" style="height: 500px;">
 
-## New Features
+## New features
 
-1. **Easy To Customize**
-2. **Custom Cursor**
-3. **New Fonts & Favicon Image**
-4. **Responsive Command Page**
+1. **Easy to customize**
+2. **Custom cursor**
+3. **New fonts & favicon image**
+4. **Responsive command page**
 
-## Customization
-It's your website, and you control the source code. So you can customize. Added “View Source” Easter Egg,
+## customization
+It's your website, and you control the source code. So you can customize. Added “view source” easter egg,
 Cursor & everything,
-if you like. But we've provided a handful of quick customizations for you to consider
-as you get your website off the ground.
+If you like. But we've provided a handful of quick customizations for you to consider
+As you get your website off the ground.
 At this point, you should have a clear idea of why you’re creating a personal website.
 Now that you’ve chosen a template to get you started, it’s time to consider the how.
-<p>When it comes to design there are 3 key areas:</p>
+<p>when it comes to design there are 3 key areas:</p>
 
-1. **Background**. Change the color, texture,
-or image for the background of your site to fit your brand
-or your bot features.
+1. **background**. Change the color, texture,
+Or image for the background of your site to fit your brand
+Or your bot features.
 
-2. **Colors**. Choose a palette that works well with your 
-template or create or replicate one that matches your brand color scheme.
+2. **colors**. Choose a palette that works well with your 
+Template or create or replicate one that matches your brand color scheme.
 
-3. **Text Style**. There are sizes, colors, and styles of text for different sections within your website template.
+3. **text style**. There are sizes, colors, and styles of text for different sections within your website template.
 You can modify things such as paragraph titles, menus, and page titles.
 
-## One last step!
+## one last step!
 With your website template customized and the content for your pages added,
-all that’s left to do is run your website.
+All that’s left to do is run your website.
 Congratulations on getting your website online.
 
-**By Abhay Mourya** <br>Hope You All Like It<br>
+
+* [Join a discord server](https://discord.gg/CUgHj4X7uB)
+* [Contact the author](https://github.com/Abhay557)
+* [Github repo](https://github.com/Abhay557/Html5-Game)
