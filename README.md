@@ -19,11 +19,6 @@ built with Bootstrap and has many ready-made pages to edit by your own.</h4>
 3. **New Fonts & Favicon Image**
 4. **Responsive Command Page**
 
-## Launch...
-To access the live site, the link can be found at the Top Left  of the autocode code editor as shown below! Make Sure That You Run The Index.html File.
-
-<img src="/readme/gallery/7.PNG" style="height: 100px;">
-
 ## Customization
 It's your website, and you control the source code. So you can customize. Added “View Source” Easter Egg,
 Cursor & everything,
