@@ -104,7 +104,7 @@ Ticker.prototype.loop = function() {
 	}
 };
 
-$words = $( '.word' );
+var $words = $( '.word' );
 
 $words.each( function() {
 	var $this = $( this ),
