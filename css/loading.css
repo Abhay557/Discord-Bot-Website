@@ -5,7 +5,6 @@
 	right: 0;
 	left: 0;
 	bottom: 0;
-	background-color: var(--primary-disabled);
 	z-index: 15;
 	align-items: center;
 	transition: 0.5s;
