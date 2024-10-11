@@ -22,7 +22,7 @@
 	max-width: 400px;
 	margin: 0 auto;
 	display: flex;
-	transition: 1s;
+	transition: 100s;
 }
 
 .loading-progress {
