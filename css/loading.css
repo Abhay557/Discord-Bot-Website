@@ -70,10 +70,8 @@
 	color: #fff;
 	font-size: 2.5em;
 	height: 2.5em;
-	left: 0;
 	line-height: 2.5em;
 	margin: auto;
-	right: 0;
 	position: absolute;
 	text-shadow: 0 0 10px rgba(50, 255, 50, 0.5), 0 0 5px rgba(100, 255, 100, 0.5);
 	top: 0
@@ -95,7 +93,6 @@
 	background-size: 1000px 2px;
 	bottom: 0;
 	content: '';
-	position: center;
 	right: 0;
 	top: 0;
   }
