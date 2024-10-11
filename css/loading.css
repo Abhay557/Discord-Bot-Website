@@ -95,8 +95,7 @@
 	background-size: 1000px 2px;
 	bottom: 0;
 	content: '';
-	left: 0;
-	position: absolute;
+	position: center;
 	right: 0;
 	top: 0;
   }
