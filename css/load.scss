@@ -1,0 +1,447 @@
+$debug: false;
+$blur-in: blur(0.1875em);
+$blur-out: blur(0.375em);
+$ease-in: cubic-bezier(0.33,0,0.67,0);
+$ease-out: cubic-bezier(0.33,1,0.67,1);
+$ease-in-out: cubic-bezier(0.65,0,0.35,1);
+$steps-start: steps(1,start);
+$steps-end: steps(1,end);
+
+* {
+	border: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+:root {
+	--hue: 223;
+	--bg: hsl(var(--hue),10%,90%);
+	--fg: hsl(var(--hue),10%,10%);
+	--trans-dur: 0.3s;
+	font-size: calc(28px + (60 - 28) * (100vw - 280px) / (3840 - 280));
+}
+body {
+	background-color: var(--bg);
+	color: var(--fg);
+	display: grid;
+	place-items: center;
+	font: 1em/1.5 sans-serif;
+	height: 100vh;
+	transition:
+		background-color var(--trans-dur),
+		color var(--trans-dur);
+}
+.device {
+	@if $debug == true {
+		outline: 1px solid;
+	}
+	position: relative;
+	width: 4em;
+	height: 4em;
+
+	&__a,
+	&__a-1,
+	&__a-2,
+	&__b,
+	&__c,
+	&__d,
+	&__e,
+	&__f,
+	&__g {
+		$dur: 3s;
+		@if $debug == true {
+			$dur: $dur * 4;
+			opacity: 0.5;
+		}
+		animation: device-a $dur $ease-in-out infinite;
+		position: absolute;
+		transition:
+			background-color var(--trans-dur),
+			box-shadow var(--trans-dur);
+	}
+	&__a,
+	&__d,
+	&__e {
+		background-color: hsl(var(--hue),10%,70%);
+		box-shadow: 0 0 0 0.25em inset;
+	}
+	&__a {
+		border-radius: 0.375em;
+		top: 0;
+		width: 4em;
+		height: 2.5em;
+		z-index: 1;
+
+		&-1,
+		&-2 {
+			visibility: hidden;
+		}
+		&-1 {
+			animation-name: device-a-1;
+			top: 2.25em;
+			left: 1.5em;
+			width: 1em;
+			height: 0.25em;
+		}
+		&-2 {
+			animation-name: device-a-2;
+			top: 0.625em;
+			right: 0;
+			width: 0.25em;
+			height: 0.75em;
+		}
+	}
+	&__a-1,
+	&__a-2,
+	&__b,
+	&__c,
+	&__f,
+	&__g {
+		background-color: var(--fg);
+		border-radius: 0.125em;
+	}
+	&__b {
+		animation-name: device-b;
+		top: 2.25em;
+		left: 1.875em;
+		width: 0.25em;
+		height: 1em;
+	}
+	&__c {
+		animation-name: device-c;
+		top: 3em;
+		left: 1em;
+		width: 2em;
+		height: 0.25em;
+	}
+	&__d,
+	&__e {
+		left: 1.25em;
+		width: 1.5em;
+		height: 0.875em;
+		visibility: hidden;
+	}
+	&__d {
+		animation-name: device-d;
+		border-radius: 0.375em 0.375em 0 0;
+		top: 0.75em;
+	}
+	&__e {
+		animation-name: device-e;
+		border-radius: 0 0 0.375em 0.375em;
+		top: 1.625em;
+	}
+	&__f,
+	&__g {
+		filter: $blur-out;
+		bottom: 0;
+		height: 0.25em;
+	}
+	&__f {
+		animation-name: device-f;
+		opacity: 0.5;
+		left: 1em;
+		width: 2em;
+	}
+	&__g {
+		animation-name: device-g;
+		opacity: 0;
+		left: 0;
+		width: 4em;
+	}
+}
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg: hsl(var(--hue),10%,10%);
+		--fg: hsl(var(--hue),10%,90%);
+	}
+	.device {
+		&__a,
+		&__d,
+		&__e {
+			background-color: hsl(var(--hue),10%,30%);
+		}
+	}
+}
+/* Animations */
+@keyframes device-a {
+	from,
+	to {
+		animation-timing-function: $ease-in;
+		left: 0;
+		width: 4em;
+		height: 2.5em;
+		transform: translateY(0);
+	}
+	12.5% {
+		animation-timing-function: $ease-out;
+		left: 0;
+		width: 4em;
+		height: 2.5em;
+		transform: translateY(1.5em);
+	}
+	25% {
+		animation-timing-function: $ease-in;
+		left: 0;
+		width: 4em;
+		height: 2.5em;
+		transform: translateY(0.375em);
+	}
+	37.5% {
+		animation-timing-function: $ease-out;
+		left: 0;
+		width: 4em;
+		height: 2.5em;
+		transform: translateY(1.5em);
+	}
+	50% {
+		animation-timing-function: $ease-in;
+		left: 1em;
+		width: 2em;
+		height: 3em;
+		transform: translateY(0.125em);
+	}
+	62.5% {
+		animation-timing-function: $ease-out;
+		left: 1em;
+		width: 2em;
+		height: 3em;
+		transform: translateY(1em);
+	}
+	75% {
+		animation-timing-function: $ease-in;
+		left: 1em;
+		width: 2em;
+		height: 2em;
+		transform: translateY(0.625em);
+	}
+	87.5% {
+		animation-timing-function: $ease-out;
+		left: 1em;
+		width: 2em;
+		height: 2em;
+		transform: translateY(1.375em);
+	}
+}
+@keyframes device-a-1 {
+	from {
+		animation-timing-function: $steps-end;
+		left: 1.5em;
+		width: 1em;
+		transform: translateY(0);
+		visibility: hidden;
+	}
+	12.5% {
+		animation-timing-function: $ease-out;
+		left: 1.5em;
+		width: 1em;
+		transform: translateY(0);
+		visibility: visible;
+	}
+	25%,
+	37.5% {
+		animation-timing-function: $ease-out;
+		left: 1.5em;
+		width: 1em;
+		transform: translateY(-0.5em);
+		visibility: visible;
+	}
+	50%,
+	62.5% {
+		animation-timing-function: $ease-out;
+		left: 0.875em;
+		width: 0.25em;
+		transform: translateY(0);
+		visibility: visible;
+	}
+	75%,
+	to {
+		animation-timing-function: $ease-out;
+		left: 0.875em;
+		width: 0.25em;
+		transform: translateY(-0.5em);
+		visibility: hidden;
+	}
+}
+@keyframes device-a-2 {
+	from {
+		animation-timing-function: $steps-end;
+		transform: translate(0,0.375em);
+		visibility: hidden;
+	}
+	62.5% {
+		animation-timing-function: $ease-out;
+		transform: translate(0,0.375em);
+		visibility: visible;
+	}
+	75%,
+	87.5% {
+		animation-timing-function: $ease-out;
+		transform: translate(0.375em,0);
+		visibility: visible;
+	}
+	to {
+		transform: translate(0,0.25em);
+		visibility: visible;
+	}
+}
+@keyframes device-b {
+	from,
+	to {
+		animation-timing-function: $ease-in;
+		transform: translateY(0);
+		visibility: visible;
+	}
+	10%,
+	12.5% {
+		animation-timing-function: $steps-start;
+		transform: translateY(0.75em);
+		visibility: visible;
+	}
+	25% {
+		animation-timing-function: $steps-start;
+		top: 2.25em;
+		left: 1.875em;
+		transform: translateY(0.75em);
+		visibility: hidden;
+	}
+	87.5% {
+		animation-timing-function: $ease-out;
+		transform: translateY(0.75em);
+		visibility: hidden;
+	}
+}
+@keyframes device-c {
+	from,
+	to {
+		animation-timing-function: $ease-in;
+		transform: translateY(0);
+		visibility: visible;
+		width: 2em;
+	}
+	10%,
+	12.5% {
+		animation-timing-function: $steps-start;
+		transform: translateY(0.75em);
+		visibility: visible;
+		width: 2em;
+	}
+	25% {
+		animation-timing-function: $steps-start;
+		top: 3em;
+		left: 1em;
+		width: 2em;
+		transform: translateY(0.75em);
+		visibility: hidden;
+    	width: 2em;
+	}
+	87.5% {
+		animation-timing-function: $ease-out;
+		left: 1.5em;
+		transform: translateY(0.75em);
+		visibility: hidden;
+		width: 1em;
+	}
+}
+@keyframes device-d {
+	from {
+		animation-timing-function: $steps-end;
+		transform: translateY(0.25em);
+		visibility: hidden;
+	}
+	62.5% {
+		animation-timing-function: $ease-out;
+		transform: translateY(0.25em);
+		visibility: visible;
+	}
+	75% {
+		animation-timing-function: $ease-in;
+		transform: translateY(-0.75em);
+	}
+	87.5% {
+		animation-timing-function: $ease-out;
+		transform: translateY(0);
+	}
+	to {
+		transform: translateY(-0.75em);
+	}
+}
+@keyframes device-e {
+	from {
+		animation-timing-function: $steps-end;
+		transform: translateY(1.5em);
+		visibility: hidden;
+	}
+	62.5% {
+		animation-timing-function: $ease-out;
+		transform: translateY(1.5em);
+		visibility: visible;
+	}
+	75% {
+		animation-timing-function: $ease-in;
+		transform: translateY(0.75em);
+	}
+	87.5% {
+		animation-timing-function: $ease-out;
+		transform: translateY(1.5em);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
+@keyframes device-f {
+	from {
+		animation-timing-function: $ease-in;
+		filter: $blur-out;
+	}
+	12.5% {
+		animation-timing-function: $ease-out;
+		filter: $blur-in;
+		opacity: 0.5;
+	}
+	25%,
+	to {
+		filter: $blur-out;
+		opacity: 0;
+	}
+}
+@keyframes device-g {
+	from,
+	12.5% {
+		animation-timing-function: $ease-out;
+		background-color: var(--fg); // needed to fix a glitch in Safari
+		filter: $blur-in;
+		opacity: 0;
+	}
+	25% {
+		animation-timing-function: $ease-in;
+		background-color: var(--fg); // same as above
+		filter: $blur-out;
+		opacity: 0.5;
+	}
+	37.5% {
+		animation-timing-function: $ease-out;
+		filter: $blur-in;
+		opacity: 0.5;
+		left: 0;
+		width: 4em;
+	}
+	50%,
+	75%,
+	to {
+		animation-timing-function: $ease-in;
+		filter: $blur-out;
+		opacity: 0.5;
+		left: 1em;
+		width: 2em;
+	}
+	62.5%,
+	87.5% {
+		animation-timing-function: $ease-out;
+		filter: $blur-in;
+		opacity: 0.5;
+		left: 1em;
+		width: 2em;
+	}
+}
